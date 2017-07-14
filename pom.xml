@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.syncthemall</groupId>
 	<artifactId>boilerpipe</artifactId>
-	<version>1.2.2</version>
+	<version>1.2.2-inqool</version>
 	<packaging>jar</packaging>
 	<name>boilerpipe</name>
 	<inceptionYear>2013</inceptionYear>
@@ -43,7 +43,7 @@
 		<dependency>
 			<groupId>net.sourceforge.nekohtml</groupId>
 			<artifactId>nekohtml</artifactId>
-			<version>1.9.20</version>
+			<version>1.9.22</version>
 		</dependency>
 		<dependency>
 			<groupId>xerces</groupId>
@@ -164,6 +164,9 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
 				<version>1.5</version>
+                                <configuration>
+                                  <skip>true</skip>
+                                </configuration>
 				<executions>
 					<execution>
 						<id>sign-artifacts</id>
@@ -176,13 +179,13 @@
 			</plugin>
 		</plugins>
 	</build>
-	<distributionManagement>
-		<repository>
-			<id>nexus-releases</id>
-			<name>Nexus Release Repository</name>
-			<url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-	</distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>nexus.inqool.cz</id>
+            <name>nexus.inqool.cz</name>
+            <url>http://nexus.inqool.cz/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<source.version>1.7</source.version>
